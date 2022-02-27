@@ -35,8 +35,8 @@ workflows:
                 cd android && ./gradlew assembleAndroidTest
             - name: Coverage
               script: |
-                pip install pytest
-                pip install pytest-cov
-                coverage xml
+                npm run coverage
+              test_report: android/app/build/outputs/**/*.xml   
         artifacts:
-            - android/app/build/outputs/**/*.apk    
+            - android/app/build/outputs/**/*.apk   
+            - android/app/build/outputs/**/*.xml  

@@ -36,7 +36,8 @@ workflows:
             - name: Coverage
               script: |
                 npm run coverage
-              test_report: android/app/build/outputs/**/*.xml   
+                test_report: app/build/test-results/**/*.xml
+   
         artifacts:
             - android/app/build/outputs/**/*.apk   
-            - android/app/build/outputs/**/*.xml  
+            - app/build/test-results/**/*.xml 
